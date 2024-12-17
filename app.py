@@ -105,14 +105,18 @@ timeline_data = [
 ]
 timeline(timeline_data, height=400)
 
-# Projects
+# Project Cards (Updated layout for better structure)
 section_header("Projects")
 col1, col2 = st.columns(2)
+
+# Project 1
 with col1:
     st.markdown("""
     <div class="project-card">
         <h3>Automated Grading System</h3>
-        <p><strong>Python, SQL | Apr. 2024</strong></p>
+        <p><strong>Technologies:</strong> Python, SQL</p>
+        <p><strong>April 2024</strong></p>
+        <p><strong>Key Features:</strong></p>
         <ul>
             <li>Reduced manual grading time by 70%</li>
             <li>Improved grading accuracy by 15%</li>
@@ -120,11 +124,15 @@ with col1:
         </ul>
     </div>
     """, unsafe_allow_html=True)
+
+# Project 2
 with col2:
     st.markdown("""
     <div class="project-card">
         <h3>Flexion: AI-Powered Fitness Coach</h3>
-        <p><strong>Python, HTML, CSS, React | Nov. 2024</strong></p>
+        <p><strong>Technologies:</strong> Python, HTML, CSS, React</p>
+        <p><strong>November 2024</strong></p>
+        <p><strong>Key Features:</strong></p>
         <ul>
             <li>90%+ accuracy in real-time posture recognition</li>
             <li>Reduced response latency by 30%</li>
@@ -132,6 +140,7 @@ with col2:
         </ul>
     </div>
     """, unsafe_allow_html=True)
+
 
 # Skills
 section_header("Technical Skills")
