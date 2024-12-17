@@ -98,9 +98,10 @@ with col1:
         <h3>Automated Grading System</h3>
         <p><strong>Python, SQL | Apr. 2024</strong></p>
         <ul>
-            <li>Reduced manual grading time by 70%</li>
-            <li>Improved grading accuracy by 15%</li>
-            <li>Achieved 90% grading consistency rate</li>
+            <li>Developed a web application to automate the grading process, reducing manual grading time by 70% for teachers.</li>
+            <li>Implemented the model using PyTorch and BERT architecture, improving grading accuracy by 15% compared to traditional keyword-based methods.</li>
+            <li>Used Kmeans clustering to group similar student responses together and identify common patterns and themes.</li>
+            <li>Graded student responses using cosine similarity to compare their vector representations with the correct answer vectors.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -112,7 +113,8 @@ with col1:
         <ul>
             <li>Automated real-time financial news scraping from Yahoo Finance using BeautifulSoup for data acquisition.</li>
             <li>Built a sentiment analysis pipeline with FinBERT, transformers, and PyTorch to classify sentiments as negative, neutral, or positive.</li>
-            <li>Visualized sentiment distributions using matplotlib, seaborn, and pywaffle with various chart types for insights.</li>
+            <li>Visualized sentiment distributions using matplotlib, seaborn, and pywaffle through bar charts, pie charts, heatmaps, and bubble plots.</li>
+            <li>Processed and transformed the scraped data using pandas and numpy to prepare it for sentiment analysis.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -123,9 +125,10 @@ with col2:
         <h3>Phishing Email Detector</h3>
         <p><strong>Python, NLP | Jul. 2024</strong></p>
         <ul>
-            <li>Created, deployed and refined a Streamlit-based Phishing Email Detector using machine learning and NLP</li>
-            <li>Achieved 95%+ detection accuracy</li>
-            <li>Worked on a dataset of 10,000+ emails/li>
+            <li>Developed a machine learning model to detect phishing emails with high accuracy of 97%.</li>
+            <li>Designed and implemented the front-end using the Streamlit framework to provide a user-friendly web interface for real-time email phishing detection.</li>
+            <li>Utilized Pandas and NLTK for data preprocessing, TfidfVectorizer from Scikit-learn for feature extraction, and a Multinomial Naive Bayes classifier to classify emails as phishing or non-phishing.</li>
+            <li> Achieved high model performance, evaluated using accuracy score and classification report metrics. </li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -135,9 +138,9 @@ with col2:
         <h3>Flexion: AI-Powered Fitness Coach</h3>
         <p><strong>Python, HTML, CSS, React | Nov. 2024</strong></p>
         <ul>
-            <li>90%+ accuracy in real-time posture recognition</li>
-            <li>Reduced response latency by 30%</li>
-            <li>Implemented dynamic workout planning with GPT-2</li>
+            <li>Built an interactive React-based front-end to support real-time posture correction, progress tracking, and adaptive workout recommendations.</li>
+            <li>Collaborated on AI integration, leveraging Generative AI (GPT-2) for dynamic workout planning and TensorFlow for pose estimation, achieving 90%+ accuracy in real-time posture recognition.</li>
+            <li>Ensured seamless frontend-backend communication via FastAPI, reducing response latency by 30%, and enabling personalized fitness guidance and live feedback.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
