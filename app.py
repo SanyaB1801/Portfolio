@@ -23,6 +23,45 @@ def load_lottieurl(url: str):
     if r.status_code != 200:
         return None
     return r.json()
+
+import streamlit as st
+
+def toggle_dark_mode():
+    theme = st.radio("Choose Theme", ("Light", "Dark"), index=0)
+    if theme == "Dark":
+        st.markdown("""
+        <style>
+        body {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        .main-header, .sub-header, .section-header {
+            color: #fff;
+        }
+        .education-card, .project-card, .skills-card, .extracurricular-card {
+            background-color: #444;
+            color: #f0f0f0;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <style>
+        body {
+            background-color: #f0e6ff;
+            color: #5d4777;
+        }
+        .main-header, .sub-header, .section-header {
+            color: #5d4777;
+        }
+        .education-card, .project-card, .skills-card, .extracurricular-card {
+            background-color: #f8f5ff;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+toggle_dark_mode()
+
+
 def nav_bar():
     st.markdown("""
         <nav>
