@@ -49,45 +49,45 @@ I'm a B.Tech. student in Artificial Intelligence and Machine Learning at Vivekan
 Passionate about AI, machine learning, and data science, I'm constantly working on innovative projects and expanding my skills in these cutting-edge fields.
 """)
 
-# Education Section
-section_header("Education")
-st.markdown("""
-<div class="education-card">
-    <h3>B.Tech. in Artificial Intelligence and Machine Learning</h3>
-    <h4>Vivekananda Institute of Professional Studies - Technical Campus</h4>
-    <p>2022-2026</p>
-    <p><strong>CGPA: 8.608</strong></p>
-    <h4>Relevant Coursework:</h4>
-    <ul>
-        <li>Data Structures</li>
-        <li>Software Methodology</li>
-        <li>Artificial Intelligence</li>
-        <li>Database Management</li>
-        <li>Data Science</li>
-        <li>Internet Networks</li>
-        <li>Machine Learning</li>
-        <li>Statistics</li>
-    </ul>
-</div>
-""", unsafe_allow_html=True)
+# # Education Section
+# section_header("Education")
+# st.markdown("""
+# <div class="education-card">
+#     <h3>B.Tech. in Artificial Intelligence and Machine Learning</h3>
+#     <h4>Vivekananda Institute of Professional Studies - Technical Campus</h4>
+#     <p>2022-2026</p>
+#     <p><strong>CGPA: 8.608</strong></p>
+#     <h4>Relevant Coursework:</h4>
+#     <ul>
+#         <li>Data Structures</li>
+#         <li>Software Methodology</li>
+#         <li>Artificial Intelligence</li>
+#         <li>Database Management</li>
+#         <li>Data Science</li>
+#         <li>Internet Networks</li>
+#         <li>Machine Learning</li>
+#         <li>Statistics</li>
+#     </ul>
+# </div>
+# """, unsafe_allow_html=True)
 
-# Experience Section
-section_header("Experience")
-timeline_data = [
-    {
-        "title": "Summer Intern",
-        "content": "IIT Guwahati",
-        "date": "Jul 2024 – Aug 2024",
-        "description": "Enhanced knowledge of secure coding, system security, and cybersecurity protocols. Created a Streamlit-based Phishing Email Detector with 95%+ accuracy."
-    },
-    {
-        "title": "Contributor",
-        "content": "Girlscript Summer of Code",
-        "date": "May 2024 – Aug 2024",
-        "description": "Contributed to diverse projects, achieved top 20% ranking, and refined open-source development skills."
-    }
-]
-timeline(timeline_data, height=400)
+# # Experience Section
+# section_header("Experience")
+# timeline_data = [
+#     {
+#         "title": "Summer Intern",
+#         "content": "IIT Guwahati",
+#         "date": "Jul 2024 – Aug 2024",
+#         "description": "Enhanced knowledge of secure coding, system security, and cybersecurity protocols. Created a Streamlit-based Phishing Email Detector with 95%+ accuracy."
+#     },
+#     {
+#         "title": "Contributor",
+#         "content": "Girlscript Summer of Code",
+#         "date": "May 2024 – Aug 2024",
+#         "description": "Contributed to diverse projects, achieved top 20% ranking, and refined open-source development skills."
+#     }
+# ]
+# timeline(timeline_data, height=400)
 
 # Projects Section
 section_header("Projects")
@@ -104,7 +104,32 @@ with col1:
         </ul>
     </div>
     """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="project-card">
+        <h3>Financial News Sentiment Analysis</h3>
+        <p><strong>Python, FINBERT | Sep. 2024</strong></p>
+        <ul>
+            <li>Automated real-time financial news scraping from Yahoo Finance using BeautifulSoup for data acquisition.</li>
+            <li>Built a sentiment analysis pipeline with FinBERT, transformers, and PyTorch to classify sentiments as negative, neutral, or positive.</li>
+            <li>Visualized sentiment distributions using matplotlib, seaborn, and pywaffle with various chart types for insights.</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
 with col2:
+    st.markdown("""
+    <div class="project-card">
+        <h3>Phishing Email Detector</h3>
+        <p><strong>Python, NLP | Jul. 2024</strong></p>
+        <ul>
+            <li>Created, deployed and refined a Streamlit-based Phishing Email Detector using machine learning and NLP</li>
+            <li>Achieved 95%+ detection accuracy</li>
+            <li>Worked on a dataset of 10,000+ emails/li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+    
     st.markdown("""
     <div class="project-card">
         <h3>Flexion: AI-Powered Fitness Coach</h3>
@@ -129,6 +154,7 @@ with col1:
         <p>HTML, CSS, JavaScript, React</p>
     </div>
     """, unsafe_allow_html=True)
+    
 with col2:
     st.markdown("""
     <div class="skills-card">
