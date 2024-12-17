@@ -5,8 +5,10 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0e6ff;
     color: #5d4777;
+    line-height: 1.6;
 }
 
+/* Header */
 .main-header {
     color: #8a7aa1;
     font-size: 3.5rem;
@@ -24,53 +26,18 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Section Headers */
 .section-header {
     color: #8a7aa1;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     border-bottom: 2px solid #d5c8e6;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
-/* Streamlit element customization */
-.stButton > button {
-    background-color: #c5b3e6;
-    color: #5d4777;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.stButton > button:hover {
-    background-color: #a393bf;
-    color: #ffffff;
-}
-
-.stTextInput > div > div > input {
-    background-color: #e8e0f7;
-    border: 1px solid #c5b3e6;
-    border-radius: 10px;
-}
-
-.stSelectbox > div > div > select {
-    background-color: #e8e0f7;
-    border: 1px solid #c5b3e6;
-    border-radius: 10px;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    color: #a393bf;
-    font-size: 0.9rem;
-    margin-top: 50px;
-}
-
-/* Custom styles for specific elements */
+/* Contact Links */
 a.contact-link {
     color: #9f86c0;
     text-decoration: none;
@@ -84,32 +51,28 @@ a.contact-link:hover {
     text-decoration: none;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 0;
+.stButton > button {
+    background-color: #c5b3e6;
+    color: #5d4777;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-li {
-    margin-bottom: 10px;
+.stButton > button:hover {
+    background-color: #a393bf;
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Additional styles for better readability */
-p, li {
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-h3 {
-    color: #7c639f;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-/* Card-like sections */
+/* Cards */
 .education-card, .project-card, .skills-card, .extracurricular-card {
     background-color: #f8f5ff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     transition: all 0.3s ease;
@@ -120,18 +83,26 @@ h3 {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-.education-card h3, .project-card h3, .skills-card h3 {
+.education-card h3, .project-card h3, .skills-card h3, .extracurricular-card h3 {
     color: #6a4c93;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 1.75rem;
 }
 
-.education-card h4 {
+.education-card h4, .project-card h4 {
     color: #8a7aa1;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
 }
 
-.project-card ul, .skills-card ul {
-    padding-left: 20px;
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
 .extracurricular-card .activity {
@@ -145,16 +116,14 @@ h3 {
 
 .extracurricular-card .activity p {
     color: #8a7aa1;
+    font-size: 1.1rem;
 }
 
-/* Timeline customization */
-.timeline-component {
-    font-family: 'Roboto', sans-serif;
-}
-
+/* Timeline */
 .timeline-component .timeline-item-title {
     color: #6a4c93;
     font-weight: bold;
+    font-size: 1.25rem;
 }
 
 .timeline-component .timeline-item-content {
@@ -163,5 +132,39 @@ h3 {
 
 .timeline-component .timeline-item-description {
     color: #5d4777;
+    font-size: 1rem;
 }
 
+/* Footer */
+.footer {
+    text-align: center;
+    color: #a393bf;
+    font-size: 1rem;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Custom styling for form elements */
+.stTextInput > div > div > input {
+    background-color: #e8e0f7;
+    border: 1px solid #c5b3e6;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.stSelectbox > div > div > select {
+    background-color: #e8e0f7;
+    border: 1px solid #c5b3e6;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.stTextArea > div > div > textarea {
+    background-color: #e8e0f7;
+    border: 1px solid #c5b3e6;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 1.1rem;
+}
