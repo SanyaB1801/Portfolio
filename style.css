@@ -1,0 +1,90 @@
+/* Main styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0e6ff;
+    color: #5d4777;
+}
+
+.main-header {
+    color: #8a7aa1;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.sub-header {
+    color: #a393bf;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.section-header {
+    color: #8a7aa1;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px solid #d5c8e6;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Streamlit element customization */
+.stButton > button {
+    background-color: #c5b3e6;
+    color: #5d4777;
+}
+
+.stTextInput > div > div > input {
+    background-color: #e8e0f7;
+}
+
+.stSelectbox > div > div > select {
+    background-color: #e8e0f7;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #a393bf;
+    font-size: 0.8rem;
+    margin-top: 50px;
+}
+
+/* Custom styles for specific elements */
+a {
+    color: #9f86c0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Additional styles for better readability */
+p, li {
+    line-height: 1.6;
+}
+
+h3 {
+    color: #7c639f;
+}
+
+/* Card-like sections */
+.stMarkdown {
+    background-color: #f8f5ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
