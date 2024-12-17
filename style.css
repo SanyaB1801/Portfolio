@@ -37,6 +37,47 @@ body {
     margin-bottom: 20px;
 }
 
+/* Navigation Bar Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5d4777;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav .nav-links li {
+    margin: 0 15px;
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #c5b3e6;
+}
+
+/* Adding margin to prevent the content from hiding under the fixed navbar */
+body {
+    margin-top: 60px; /* Adjust as per the height of your navbar */
+}
+
+
 /* Contact Links */
 a.contact-link {
     color: #9f86c0;
