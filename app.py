@@ -23,6 +23,22 @@ def load_lottieurl(url: str):
     if r.status_code != 200:
         return None
     return r.json()
+def nav_bar():
+    st.markdown("""
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#extracurricular">Extracurricular</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    """, unsafe_allow_html=True)
+
+nav_bar()
 
 # Header
 st.markdown('<h1 class="main-header">Sanya Behera</h1>', unsafe_allow_html=True)
