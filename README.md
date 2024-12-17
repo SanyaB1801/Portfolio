@@ -1,13 +1,6 @@
 <h1 align="center">Hi 👋, I'm Sanya Behera</h1>
 <h3 align="center">A passionate AI/ML enthusiast dedicated to creating an impact.</h3>
 
-<table align="center">
-  <tr>
-    <td>You are visitor</td>
-    <td><img src="https://profile-counter.glitch.me/sanyab1801/count.svg" alt="vistor count" height="30" width="224" /></td>
-  </tr>
-</table>
-
 <h2 align="center"><b>🚀 Projects:</b></h2>
 
 - **[Phishing Email Detector](https://phishing-detector-mail.streamlit.app/)**: Detect phishing emails using machine learning. [Repository Link](https://github.com/SanyaB1801/Phishing-Detector)
