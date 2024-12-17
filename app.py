@@ -14,8 +14,8 @@ def local_css(file_name):
 local_css("style.css")
 
 # Helper function for section headers
-def section_header(title):
-    st.markdown(f'<h2 class="section-header">{title}</h2>', unsafe_allow_html=True)
+def section_header(title, custom_class="section-header"):
+    st.markdown(f'<h2 class="{custom_class}">{title}</h2>', unsafe_allow_html=True)
 
 # Lottie Animation
 def load_lottieurl(url: str):
@@ -24,24 +24,7 @@ def load_lottieurl(url: str):
         return None
     return r.json()
 
-def nav_bar():
-    st.markdown("""
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#extracurricular">Extracurricular</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    """, unsafe_allow_html=True)
-
-nav_bar()
-
-# Header
+# Header Section
 st.markdown('<h1 class="main-header">Sanya Behera</h1>', unsafe_allow_html=True)
 st.markdown('<p class="sub-header">AI and Machine Learning Enthusiast</p>', unsafe_allow_html=True)
 
@@ -50,7 +33,7 @@ lottie_url = "https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json"
 lottie_json = load_lottieurl(lottie_url)
 st_lottie(lottie_json, height=200, key="coding")
 
-# Contact information
+# Contact Information - Updated for neat columns
 col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown('<a href="mailto:sanyabehera13@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> Email</a>', unsafe_allow_html=True)
@@ -59,14 +42,14 @@ with col2:
 with col3:
     st.markdown('<a href="https://github.com/SanyaB1801" class="contact-link"><i class="fab fa-github"></i> GitHub</a>', unsafe_allow_html=True)
 
-# About
+# About Me Section
 section_header("About Me")
 st.info("""
 I'm a B.Tech. student in Artificial Intelligence and Machine Learning at Vivekananda Institute of Professional Studies - Technical Campus. 
 Passionate about AI, machine learning, and data science, I'm constantly working on innovative projects and expanding my skills in these cutting-edge fields.
 """)
 
-# Education
+# Education Section
 section_header("Education")
 st.markdown("""
 <div class="education-card">
@@ -88,7 +71,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Experience
+# Experience Section
 section_header("Experience")
 timeline_data = [
     {
@@ -106,18 +89,14 @@ timeline_data = [
 ]
 timeline(timeline_data, height=400)
 
-# Project Cards (Updated layout for better structure)
+# Projects Section
 section_header("Projects")
 col1, col2 = st.columns(2)
-
-# Project 1
 with col1:
     st.markdown("""
     <div class="project-card">
         <h3>Automated Grading System</h3>
-        <p><strong>Technologies:</strong> Python, SQL</p>
-        <p><strong>April 2024</strong></p>
-        <p><strong>Key Features:</strong></p>
+        <p><strong>Python, SQL | Apr. 2024</strong></p>
         <ul>
             <li>Reduced manual grading time by 70%</li>
             <li>Improved grading accuracy by 15%</li>
@@ -125,15 +104,11 @@ with col1:
         </ul>
     </div>
     """, unsafe_allow_html=True)
-
-# Project 2
 with col2:
     st.markdown("""
     <div class="project-card">
         <h3>Flexion: AI-Powered Fitness Coach</h3>
-        <p><strong>Technologies:</strong> Python, HTML, CSS, React</p>
-        <p><strong>November 2024</strong></p>
-        <p><strong>Key Features:</strong></p>
+        <p><strong>Python, HTML, CSS, React | Nov. 2024</strong></p>
         <ul>
             <li>90%+ accuracy in real-time posture recognition</li>
             <li>Reduced response latency by 30%</li>
@@ -142,8 +117,7 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
-
-# Skills
+# Skills Section
 section_header("Technical Skills")
 col1, col2 = st.columns(2)
 with col1:
@@ -165,7 +139,7 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
-# Extracurricular
+# Extracurricular Activities Section
 section_header("Extracurricular Activities")
 st.markdown("""
 <div class="extracurricular-card">
@@ -184,7 +158,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Footer
+# Footer Section
 st.markdown('---')
 st.markdown('<p class="footer">© 2023 Sanya Behera. All rights reserved.</p>', unsafe_allow_html=True)
-
