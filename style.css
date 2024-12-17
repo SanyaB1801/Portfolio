@@ -224,13 +224,24 @@ li {
     font-size: 1rem;
 }
 
-/* Footer */
+/* Sticky Footer */
 .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5d4777;
+    color: #fff;
     text-align: center;
-    color: #a393bf;
+    padding: 15px 0;
     font-size: 1rem;
-    margin-top: 50px;
-    padding-bottom: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
 }
 
 /* Custom styling for form elements */
