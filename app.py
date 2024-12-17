@@ -1,4 +1,7 @@
 import streamlit as st
+from streamlit_timeline import timeline
+from streamlit_lottie import st_lottie
+import requests
 
 # Set page config
 st.set_page_config(page_title="Sanya Behera - Portfolio", layout="wide")
@@ -14,22 +17,34 @@ local_css("style.css")
 def section_header(title):
     st.markdown(f'<h2 class="section-header">{title}</h2>', unsafe_allow_html=True)
 
+# Lottie Animation
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
 # Header
 st.markdown('<h1 class="main-header">Sanya Behera</h1>', unsafe_allow_html=True)
 st.markdown('<p class="sub-header">AI and Machine Learning Enthusiast</p>', unsafe_allow_html=True)
 
+# Lottie Animation
+lottie_url = "https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json"
+lottie_json = load_lottieurl(lottie_url)
+st_lottie(lottie_json, height=200, key="coding")
+
 # Contact information
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.markdown('[Email](mailto:sanyabehera13@gmail.com)')
+    st.markdown('<a href="mailto:sanyabehera13@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> Email</a>', unsafe_allow_html=True)
 with col2:
-    st.markdown('[LinkedIn](https://linkedin.com/in/sanya-behera)')
+    st.markdown('<a href="https://linkedin.com/in/sanya-behera" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>', unsafe_allow_html=True)
 with col3:
-    st.markdown('[GitHub](https://github.com/SanyaB1801)')
+    st.markdown('<a href="https://github.com/SanyaB1801" class="contact-link"><i class="fab fa-github"></i> GitHub</a>', unsafe_allow_html=True)
 
 # About
 section_header("About Me")
-st.write("""
+st.info("""
 I'm a B.Tech. student in Artificial Intelligence and Machine Learning at Vivekananda Institute of Professional Studies - Technical Campus. 
 Passionate about AI, machine learning, and data science, I'm constantly working on innovative projects and expanding my skills in these cutting-edge fields.
 """)
@@ -37,82 +52,111 @@ Passionate about AI, machine learning, and data science, I'm constantly working 
 # Education
 section_header("Education")
 st.markdown("""
-### B.Tech. in Artificial Intelligence and Machine Learning
-**Vivekananda Institute of Professional Studies - Technical Campus**
-- 2022-2026
-- CGPA: 8.608
-
-#### Relevant Coursework:
-- Data Structures
-- Software Methodology
-- Artificial Intelligence
-- Database Management
-- Data Science
-- Internet Networks
-- Machine Learning
-- Statistics
-""")
+<div class="education-card">
+    <h3>B.Tech. in Artificial Intelligence and Machine Learning</h3>
+    <h4>Vivekananda Institute of Professional Studies - Technical Campus</h4>
+    <p>2022-2026</p>
+    <p><strong>CGPA: 8.608</strong></p>
+    <h4>Relevant Coursework:</h4>
+    <ul>
+        <li>Data Structures</li>
+        <li>Software Methodology</li>
+        <li>Artificial Intelligence</li>
+        <li>Database Management</li>
+        <li>Data Science</li>
+        <li>Internet Networks</li>
+        <li>Machine Learning</li>
+        <li>Statistics</li>
+    </ul>
+</div>
+""", unsafe_allow_html=True)
 
 # Experience
 section_header("Experience")
-st.markdown("""
-### Summer Intern
-**IIT Guwahati | Jul. 2024 – Aug. 2024**
-- Worked under the guidance of a talented team of educators to enhance knowledge of secure coding, system security, and cybersecurity protocols.
-- Created, deployed and refined a Streamlit-based Phishing Email Detector using machine learning and NLP, achieving 95%+ detection accuracy on a dataset of 10,000+ emails.
-
-### Contributor in Girlscript Summer of Code
-**Girlscript Foundation | May 2024 – Aug. 2024**
-- Contributed to diverse projects, collaborating with developers and learning through real-world coding challenges.
-- Achieved top 20% ranking among contributors, earning 510 points and 6 badges for contributions.
-- Refined understanding of open-source development and honed coding skills.
-""")
+timeline_data = [
+    {
+        "title": "Summer Intern",
+        "content": "IIT Guwahati",
+        "date": "Jul 2024 – Aug 2024",
+        "description": "Enhanced knowledge of secure coding, system security, and cybersecurity protocols. Created a Streamlit-based Phishing Email Detector with 95%+ accuracy."
+    },
+    {
+        "title": "Contributor",
+        "content": "Girlscript Summer of Code",
+        "date": "May 2024 – Aug 2024",
+        "description": "Contributed to diverse projects, achieved top 20% ranking, and refined open-source development skills."
+    }
+]
+timeline(timeline_data, height=400)
 
 # Projects
 section_header("Projects")
-st.markdown("""
-### Automated Grading System in Python
-**Python, SQL | Apr. 2024**
-- Developed a web application to automate the grading process, reducing manual grading time by 70% for teachers.
-- Designed the front-end using Streamlit framework in Python to make a simple user interface for teachers and students.
-- Implemented the model using PyTorch and BERT architecture, improving grading accuracy by 15% compared to traditional keyword-based methods.
-- Used K-means clustering to group 200+ student responses, identifying common themes and improving feedback efficiency.
-- Graded student responses with cosine similarity, achieving a grading consistency rate of 90% compared to human evaluations.
-
-### Flexion: Your AI-Powered Fitness Coach
-**Python, HTML, CSS, React | Nov. 2024**
-- Built an interactive React-based front-end to support real-time posture correction, progress tracking, and adaptive workout recommendations.
-- Collaborated on AI integration, leveraging Generative AI (GPT-2) for dynamic workout planning and TensorFlow for pose estimation, achieving 90%+ accuracy in real-time posture recognition.
-- Ensured seamless frontend-backend communication via FastAPI, reducing response latency by 30%, and enabling personalized fitness guidance and live feedback.
-""")
+col1, col2 = st.columns(2)
+with col1:
+    st.markdown("""
+    <div class="project-card">
+        <h3>Automated Grading System</h3>
+        <p><strong>Python, SQL | Apr. 2024</strong></p>
+        <ul>
+            <li>Reduced manual grading time by 70%</li>
+            <li>Improved grading accuracy by 15%</li>
+            <li>Achieved 90% grading consistency rate</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+with col2:
+    st.markdown("""
+    <div class="project-card">
+        <h3>Flexion: AI-Powered Fitness Coach</h3>
+        <p><strong>Python, HTML, CSS, React | Nov. 2024</strong></p>
+        <ul>
+            <li>90%+ accuracy in real-time posture recognition</li>
+            <li>Reduced response latency by 30%</li>
+            <li>Implemented dynamic workout planning with GPT-2</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Skills
 section_header("Technical Skills")
 col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
-    ### Languages
-    Python, Java, C, Dart, SQL
-
-    ### Web
-    HTML, CSS, JavaScript, React
-    """)
+    <div class="skills-card">
+        <h3>Languages</h3>
+        <p>Python, Java, C, Dart, SQL</p>
+        <h3>Web</h3>
+        <p>HTML, CSS, JavaScript, React</p>
+    </div>
+    """, unsafe_allow_html=True)
 with col2:
     st.markdown("""
-    ### ML and Data Science
-    TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, NLTK, SpaCy, FinBERT, Transformers, OpenCV
-
-    ### UI/UX
-    Figma, Tkinter, Streamlit
-    """)
+    <div class="skills-card">
+        <h3>ML and Data Science</h3>
+        <p>TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, NLTK, SpaCy, FinBERT, Transformers, OpenCV</p>
+        <h3>UI/UX</h3>
+        <p>Figma, Tkinter, Streamlit</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Extracurricular
 section_header("Extracurricular Activities")
 st.markdown("""
-- **Newsletter Editorial Team** - Core Member | Mar. 2024 – Jul. 2024
-- **Antarman - The Yoga and Meditation club official** - Social Media Team | Jun. 2024 – Present
-- **Career Development Cell** - Creative Team | May 2024 – Present
-""")
+<div class="extracurricular-card">
+    <div class="activity">
+        <h3>Newsletter Editorial Team</h3>
+        <p>Core Member | Mar. 2024 – Jul. 2024</p>
+    </div>
+    <div class="activity">
+        <h3>Antarman - The Yoga and Meditation club</h3>
+        <p>Social Media Team | Jun. 2024 – Present</p>
+    </div>
+    <div class="activity">
+        <h3>Career Development Cell</h3>
+        <p>Creative Team | May 2024 – Present</p>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 # Footer
 st.markdown('---')
