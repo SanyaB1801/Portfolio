@@ -77,6 +77,54 @@ body {
     margin-top: 60px; /* Adjust as per the height of your navbar */
 }
 
+/* Section Backgrounds */
+#about, #education, #experience, #projects, #skills, #extracurricular {
+    background-color: #f7f1f9; /* Light background to differentiate sections */
+    padding: 50px 0;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Card hover effects */
+.education-card:hover, .project-card:hover, .skills-card:hover, .extracurricular-card:hover {
+    background-color: #f0e6ff; /* Soft hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+}
+
+/* Section Headers */
+.section-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #5d4777;
+    text-align: center;
+    border-bottom: 2px solid #a393bf;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Text Enhancements */
+p, li {
+    font-size: 1.1rem; /* Slightly larger text for better readability */
+    line-height: 1.8;
+}
+
+/* Timeline enhancements */
+.timeline-component .timeline-item-title {
+    font-size: 1.3rem;
+    color: #6a4c93;
+    font-weight: bold;
+}
+
+.timeline-component .timeline-item-content {
+    color: #7c639f;
+}
+
+.timeline-component .timeline-item-description {
+    color: #5d4777;
+}
+
 
 /* Contact Links */
 a.contact-link {
