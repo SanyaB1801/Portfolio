@@ -71,23 +71,23 @@ Passionate about AI, machine learning, and data science, I'm constantly working 
 # </div>
 # """, unsafe_allow_html=True)
 
-# # Experience Section
-# section_header("Experience")
-# timeline_data = [
-#     {
-#         "title": "Summer Intern",
-#         "content": "IIT Guwahati",
-#         "date": "Jul 2024 – Aug 2024",
-#         "description": "Enhanced knowledge of secure coding, system security, and cybersecurity protocols. Created a Streamlit-based Phishing Email Detector with 95%+ accuracy."
-#     },
-#     {
-#         "title": "Contributor",
-#         "content": "Girlscript Summer of Code",
-#         "date": "May 2024 – Aug 2024",
-#         "description": "Contributed to diverse projects, achieved top 20% ranking, and refined open-source development skills."
-#     }
-# ]
-# timeline(timeline_data, height=400)
+# Experience Section
+section_header("Experience")
+timeline_data = [
+    {
+        "title": "Summer Intern",
+        "content": "IIT Guwahati",
+        "date": "Jul 2024 – Aug 2024",
+        "description": "Enhanced knowledge of secure coding, system security, and cybersecurity protocols. Created a Streamlit-based Phishing Email Detector with 95%+ accuracy."
+    },
+    {
+        "title": "Contributor",
+        "content": "Girlscript Summer of Code",
+        "date": "May 2024 – Aug 2024",
+        "description": "Contributed to diverse projects, achieved top 20% ranking, and refined open-source development skills."
+    }
+]
+timeline(timeline_data, height=400)
 
 # Projects Section
 section_header("Projects")
@@ -144,6 +144,19 @@ with col2:
         </ul>
     </div>
     """, unsafe_allow_html=True)
+
+
+# Education Section
+section_header("Education")
+st.markdown("""
+<div class="education-card">
+    <h3>B.Tech. in Artificial Intelligence and Machine Learning</h3>
+    <h4>Vivekananda Institute of Professional Studies - Technical Campus</h4>
+    <p>2022-2026</p>
+</div>
+""", unsafe_allow_html=True)
+
+
 
 # Skills Section
 section_header("Technical Skills")
