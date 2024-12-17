@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
 /* Main styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -7,58 +9,79 @@ body {
 
 .main-header {
     color: #8a7aa1;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 .sub-header {
     color: #a393bf;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center;
     margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 .section-header {
     color: #8a7aa1;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
     border-bottom: 2px solid #d5c8e6;
     padding-bottom: 10px;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 /* Streamlit element customization */
 .stButton > button {
     background-color: #c5b3e6;
     color: #5d4777;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: #a393bf;
+    color: #ffffff;
 }
 
 .stTextInput > div > div > input {
     background-color: #e8e0f7;
+    border: 1px solid #c5b3e6;
+    border-radius: 10px;
 }
 
 .stSelectbox > div > div > select {
     background-color: #e8e0f7;
+    border: 1px solid #c5b3e6;
+    border-radius: 10px;
 }
 
 /* Footer */
 .footer {
     text-align: center;
     color: #a393bf;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 50px;
 }
 
 /* Custom styles for specific elements */
-a {
+a.contact-link {
     color: #9f86c0;
     text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-a:hover {
-    text-decoration: underline;
+a.contact-link:hover {
+    color: #7c639f;
+    text-decoration: none;
 }
 
 ul {
@@ -73,18 +96,72 @@ li {
 /* Additional styles for better readability */
 p, li {
     line-height: 1.6;
+    font-size: 1rem;
 }
 
 h3 {
     color: #7c639f;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 /* Card-like sections */
-.stMarkdown {
+.education-card, .project-card, .skills-card, .extracurricular-card {
     background-color: #f8f5ff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover, .project-card:hover, .skills-card:hover, .extracurricular-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.education-card h3, .project-card h3, .skills-card h3 {
+    color: #6a4c93;
+    margin-bottom: 10px;
+}
+
+.education-card h4 {
+    color: #8a7aa1;
+    margin-bottom: 5px;
+}
+
+.project-card ul, .skills-card ul {
+    padding-left: 20px;
+}
+
+.extracurricular-card .activity {
+    margin-bottom: 15px;
+}
+
+.extracurricular-card .activity h3 {
+    color: #6a4c93;
+    margin-bottom: 5px;
+}
+
+.extracurricular-card .activity p {
+    color: #8a7aa1;
+}
+
+/* Timeline customization */
+.timeline-component {
+    font-family: 'Roboto', sans-serif;
+}
+
+.timeline-component .timeline-item-title {
+    color: #6a4c93;
+    font-weight: bold;
+}
+
+.timeline-component .timeline-item-content {
+    color: #8a7aa1;
+}
+
+.timeline-component .timeline-item-description {
+    color: #5d4777;
 }
 
